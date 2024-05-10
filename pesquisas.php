@@ -296,16 +296,6 @@
                 </ul>
               </div><!-- End sidebar categories-->
 
-              <div class="sidebar-item tags">
-                <h3 class="sidebar-title">Palavras-chave</h3>
-                <ul class="mt-3">
-                  <li><a href="#">Revisão</a></li>
-                  <li><a href="#">Promoção da Saúde</a></li>
-                  <li><a href="#">Tecnologia Educacional</a></li>
-                  <li><a href="#">Estudo de Validação</a></li>
-                </ul>
-              </div><!-- End sidebar tags-->
-
             </div><!-- End Blog Sidebar -->
 
           </div>
