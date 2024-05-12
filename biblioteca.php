@@ -39,7 +39,7 @@
             <div class="row gy-5 posts-list">
 
               <!-- post list item -->
-              <div class="col-lg-6">
+              <div class="col-lg-12">
                 <article class="d-flex flex-column">
 
                   <!-- <div class="post-img">
@@ -74,7 +74,7 @@
               </div><!-- End post list item -->
 
               <!-- post list item -->
-              <div class="col-lg-6">
+              <div class="col-lg-12"> <!-- modificado o tamanho das postagens de artefatos na biblioteca -->
                 <article class="d-flex flex-column">
 
                   <!-- <div class="post-img">
@@ -107,7 +107,7 @@
               </div><!-- End post list item -->
 
               <!-- post list item -->
-              <div class="col-lg-6">
+              <div class="col-lg-12">
                 <article class="d-flex flex-column">
 
                   <!-- <div class="post-img">
@@ -140,7 +140,7 @@
               </div><!-- End post list item -->
 
               <!-- post list item -->
-              <div class="col-lg-6">
+              <div class="col-lg-12">
                 <article class="d-flex flex-column">
 
                   <!-- <div class="post-img">
@@ -173,7 +173,7 @@
               </div><!-- End post list item -->
 
               <!-- post list item -->
-              <div class="col-lg-6">
+              <div class="col-lg-12">
                 <article class="d-flex flex-column">
 
                   <!-- <div class="post-img">
@@ -206,7 +206,7 @@
               </div><!-- End post list item -->
 
               <!-- post list item -->
-              <div class="col-lg-6">
+              <div class="col-lg-12">
                 <article class="d-flex flex-column">
 
                   <!-- <div class="post-img">
