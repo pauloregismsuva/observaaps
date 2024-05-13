@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+    require_once('conexao.php');
+    require_once('scripts_php/utils.php');
+?>
 <html lang="pt-br">
 
 <head>
@@ -21,12 +25,39 @@
 
         <h2>Biblioteca</h2>
         <ol>
-          <li><a href="index.html">Início</a></li>
+          <li><a href="index.php">Início</a></li>
           <li>Biblioteca</li>
         </ol>
 
       </div>
     </div><!-- End Breadcrumbs -->
+
+    <?php
+      mysqli_select_db($mysqli, $db) or die("Could not select database");
+      
+      $pagina = 1;
+
+      if (isset($_GET['pagina'])) {
+        $pagina = filter_input(INPUT_GET, "pagina", FILTER_VALIDATE_INT);
+      }
+
+      if (!$pagina) {
+        $pagina = 1;
+      }
+
+      $limite = 10;
+      $inicio = ($pagina * $limite) - $limite;
+
+      $query = "SELECT COUNT(nome) num_artefatos FROM artefato";
+      $num_artefatos = mysqli_query($mysqli, $query);
+      $num_artefatos = mysqli_fetch_array($num_artefatos)['num_artefatos'];
+
+      $paginas = ceil($num_artefatos / $limite);
+
+      $query = "SELECT * FROM artefato ORDER BY ano DESC LIMIT $inicio, $limite";
+      $artefatos_result = mysqli_query($mysqli, $query);
+      $num_artefatos_pagina = mysqli_num_rows($artefatos_result);
+    ?>
 
     <!-- ======= Seção biblioteca ======= -->
     <section id="blog" class="blog">
@@ -38,213 +69,136 @@
 
             <div class="row gy-5 posts-list">
 
+              <?php
+                if($num_artefatos_pagina > 0) {
+                  for($i=0; $i<$num_artefatos_pagina; $i++) {
+                      $artefato = mysqli_fetch_array($artefatos_result);
+                      
+              ?>
+
               <!-- post list item -->
               <div class="col-lg-12">
                 <article class="d-flex flex-column">
 
-                  <!-- <div class="post-img">
-                    <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-                  </div> -->
-
                   <h2 class="title">
-                    <a href="https://drive.google.com/file/d/1jXijTETsQU2lHyygdWNIC4jiOEDqgWco/view?usp=sharing">
-                    Covid-19: repercussões na saúde mental de estudantes do ensino superior
+                    <a href="<?php print_r($artefato['url'])?>">
+                      <?php print_r($artefato['nome'])?>
                     </a>
                   </h2>
 
                   <div class="meta-top">
                     <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="https://drive.google.com/file/d/1jXijTETsQU2lHyygdWNIC4jiOEDqgWco/view?usp=sharing">E. Oliveira et al.</a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="https://drive.google.com/file/d/1jXijTETsQU2lHyygdWNIC4jiOEDqgWco/view?usp=sharing"><time datetime="2022-04-11">Mar 11, 2022</time></a></li>
-                      <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="#">12 Comments</a></li> -->
+                      <li class="d-flex align-items-center">
+
+                        <i class="bi bi-clock"></i>
+                        <a href="<?php print_r($artefato['url'])?>">
+                          <time datetime="<?php print_r($artefato['ano'])?>">
+                            <?php print_r($artefato['ano'])?>
+                          </time>
+                        </a>
+
+                      </li>
+                      <li class="d-flex align-items-center">
+                        
+                        <i class="bi bi-person"></i>
+                          <a href="">
+                          <?php 
+                            
+                            $artefato_id = $artefato['id'];
+                            $query = "SELECT * FROM artefato_pesquisador WHERE artefato_pesquisador.artefato_id = $artefato_id";
+                            
+                            $artefato_pesquisador_result = mysqli_query($mysqli, $query);
+                            $num_pesquisadores = mysqli_num_rows($artefato_pesquisador_result);
+
+                            for($j=0; $j<$num_pesquisadores; $j++) {
+                              
+                              $artefato_pesquisador = mysqli_fetch_array($artefato_pesquisador_result);
+                              $pesquisador_id = $artefato_pesquisador['pesquisador_id'];
+                              
+                              $query = "SELECT nome FROM pesquisador WHERE id = $pesquisador_id";
+                              $pesquisador_result = mysqli_query($mysqli, $query);
+                              $pesquisador = mysqli_fetch_array($pesquisador_result);
+
+                              if (j < $num_pesquisadores-1)
+                                print_r($pesquisador['nome'].", ");
+                              else
+                                print_r($pesquisador['nome']);
+                            }
+                          
+                          ?>
+                        </a>
+                      </li>
+                      
                     </ul>
                   </div>
 
                   <div class="content">
                     <p>
-                    Este artigo teve como objetivo avaliar as repercussões da Covid-19 e do isolamento social na saúde mental de estudantes do ensino superior no Ceará, Brasil. A amostra foi composta por 3.691 alunos do ensino superior participando de aulas on-line no período de junho a setembro de 2020, que responderam a dois instrumentos: um questionário sociodemográfico e situacional referente à pandemia/isolamento social e o Inventário de Saúde Mental. ...
+                      <?php print_r($artefato['descricao'])?>
                     </p>
                   </div>
 
                   <div class="read-more mt-auto align-self-end">
-                    <a href="https://drive.google.com/file/d/1jXijTETsQU2lHyygdWNIC4jiOEDqgWco/view?usp=sharing">Ver mais <i class="bi bi-arrow-right"></i></a>
+                    <a href="<?php print_r($artefato['url'])?>">
+                      Acessar
+                      <i class="bi bi-arrow-right"></i>
+                    </a>
                   </div>
 
                 </article>
-              </div><!-- End post list item -->
+              </div>
+              <!-- End post list item -->
+              
+              <?php
+                 }
+                }
+                else {
+              ?>
 
-              <!-- post list item -->
-              <div class="col-lg-12"> <!-- modificado o tamanho das postagens de artefatos na biblioteca -->
-                <article class="d-flex flex-column">
-
-                  <!-- <div class="post-img">
-                    <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
-                  </div> -->
-
-                  <h2 class="title">
-                    <a href="#">Nisi magni odit consequatur autem nulla dolorem</a>
-                  </h2>
-
-                  <div class="meta-top">
-                    <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#">K. Havenhand et al.</a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time datetime="2022-01-01">Jan 1, 2022</time></a></li>
-                      <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="#">12 Comments</a></li> -->
-                    </ul>
-                  </div>
-
-                  <div class="content">
-                    <p>
-                      Incidunt voluptate sit temporibus aperiam. Quia vitae aut sint ullam quis illum voluptatum et. Quo libero rerum voluptatem pariatur nam.
-                    </p>
-                  </div>
-
-                  <div class="read-more mt-auto align-self-end">
-                    <a href="#">Ver mais <i class="bi bi-arrow-right"></i></a>
-                  </div>
-
-                </article>
-              </div><!-- End post list item -->
-
-              <!-- post list item -->
               <div class="col-lg-12">
                 <article class="d-flex flex-column">
 
-                  <!-- <div class="post-img">
-                    <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
-                  </div> -->
-
                   <h2 class="title">
-                    <a href="#">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</a>
+                    <a href="#">
+                      Nunhum resultado encontrado.
+                    </a>
                   </h2>
-
-                  <div class="meta-top">
-                    <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#">S. Carnier e A. Parbrook</a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time datetime="2022-01-01">Jan 1, 2022</time></a></li>
-                      <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="#">12 Comments</a></li> -->
-                    </ul>
-                  </div>
-
-                  <div class="content">
-                    <p>
-                      Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et. Eum temporibus fugiat voluptate enim tenetur sunt omnis.
-                    </p>
-                  </div>
-
-                  <div class="read-more mt-auto align-self-end">
-                    <a href="#">Ver mais <i class="bi bi-arrow-right"></i></a>
-                  </div>
-
                 </article>
-              </div><!-- End post list item -->
+              </div>
 
-              <!-- post list item -->
-              <div class="col-lg-12">
-                <article class="d-flex flex-column">
-
-                  <!-- <div class="post-img">
-                    <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
-                  </div> -->
-
-                  <h2 class="title">
-                    <a href="#">Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.</a>
-                  </h2>
-
-                  <div class="meta-top">
-                    <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#">P. Fursse et al.</a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time datetime="2022-01-01">Jan 1, 2022</time></a></li>
-                      <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="#">12 Comments</a></li> -->
-                    </ul>
-                  </div>
-
-                  <div class="content">
-                    <p>
-                      Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum enim et autem. Saepe atque cum eligendi eaque iste omnis a qui.
-                    </p>
-                  </div>
-
-                  <div class="read-more mt-auto align-self-end">
-                    <a href="#">Ver mais <i class="bi bi-arrow-right"></i></a>
-                  </div>
-
-                </article>
-              </div><!-- End post list item -->
-
-              <!-- post list item -->
-              <div class="col-lg-12">
-                <article class="d-flex flex-column">
-
-                  <!-- <div class="post-img">
-                    <img src="assets/img/blog/blog-5.jpg" alt="" class="img-fluid">
-                  </div> -->
-
-                  <h2 class="title">
-                    <a href="#">Accusamus quaerat aliquam qui debitis facilis consequatur</a>
-                  </h2>
-
-                  <div class="meta-top">
-                    <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#">N. Franklen, D. Ness e D. Castellone</a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time datetime="2022-01-01">Jan 1, 2022</time></a></li>
-                      <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="#">12 Comments</a></li> -->
-                    </ul>
-                  </div>
-
-                  <div class="content">
-                    <p>
-                      In itaque assumenda aliquam voluptatem qui temporibus iusto nisi quia. Autem vitae quas aperiam nesciunt mollitia tempora odio omnis. Ipsa odit sit ut amet necessitatibus. Quo ullam ut corrupti autem consequuntur totam dolorem.
-                    </p>
-                  </div>
-
-                  <div class="read-more mt-auto align-self-end">
-                    <a href="#">Ver mais <i class="bi bi-arrow-right"></i></a>
-                  </div>
-
-                </article>
-              </div><!-- End post list item -->
-
-              <!-- post list item -->
-              <div class="col-lg-12">
-                <article class="d-flex flex-column">
-
-                  <!-- <div class="post-img">
-                    <img src="assets/img/blog/blog-6.jpg" alt="" class="img-fluid">
-                  </div> -->
-
-                  <h2 class="title">
-                    <a href="#">Distinctio provident quibusdam numquam aperiam aut</a>
-                  </h2>
-
-                  <div class="meta-top">
-                    <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#">R. Maudett</a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time datetime="2022-01-01">Jan 1, 2022</time></a></li>
-                      <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="#">12 Comments</a></li> -->
-                    </ul>
-                  </div>
-
-                  <div class="content">
-                    <p>
-                      Expedita et temporibus eligendi enim molestiae est architecto praesentium dolores. Illo laboriosam officiis quis. Labore officia quia sit voluptatem nisi est dignissimos totam. Et voluptate et consectetur voluptatem id dolor magni impedit. Omnis dolores sit.
-                    </p>
-                  </div>
-
-                  <div class="read-more mt-auto align-self-end">
-                    <a href="#">Ver mais <i class="bi bi-arrow-right"></i></a>
-                  </div>
-
-                </article>
-              </div><!-- End post list item -->
+              <?php
+                }
+              ?>
 
             </div><!-- End blog posts list -->
 
             <div class="blog-pagination">
               <ul class="justify-content-center">
-                <li><a href="#">1</a></li>
-                <li class="active"><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
+                <li>
+                  <a href="?pagina=<?php print_r($pagina-1)?>">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="?pagina=1">
+                    1
+                  </a>
+                </li>
+                <li class="active">
+                  <a href="?pagina=<?php print_r($pagina)?>">
+                    <?php print_r($pagina)?>
+                  </a>
+                </li>
+                <li>
+                  <a href="?pagina=<?php print_r($paginas)?>">
+                    <?php print_r($paginas)?>
+                  </a>
+                </li>
+                <li>
+                  <a href="?pagina=<?php print_r($pagina+1)?>">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
               </ul>
             </div><!-- End blog pagination -->
 
