@@ -174,14 +174,15 @@
 
             <div class="blog-pagination">
               <ul class="justify-content-center">
-                <li>
-                  <a href="?pagina=<?php print_r($pagina-1)?>">
-                    <span aria-hidden="true">&laquo;</span>
-                  </a>
-                </li>
+                
                 <li>
                   <a href="?pagina=1">
                     1
+                  </a>
+                </li>
+                <li>
+                  <a href="?pagina=<?php print_r($pagina-1)?>">
+                    <span aria-hidden="true">&laquo;</span>
                   </a>
                 </li>
                 <li class="active">
@@ -190,15 +191,16 @@
                   </a>
                 </li>
                 <li>
-                  <a href="?pagina=<?php print_r($paginas)?>">
-                    <?php print_r($paginas)?>
-                  </a>
-                </li>
-                <li>
                   <a href="?pagina=<?php print_r($pagina+1)?>">
                     <span aria-hidden="true">&raquo;</span>
                   </a>
                 </li>
+                <li>
+                  <a href="?pagina=<?php print_r($paginas)?>">
+                    <?php print_r($paginas)?>
+                  </a>
+                </li>
+                
               </ul>
             </div><!-- End blog pagination -->
 
