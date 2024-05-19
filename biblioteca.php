@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <?php
-    require_once('conexao.php');
-    require_once('scripts_php/utils.php');
+  require_once('conexao.php');
+  require_once('scripts_php/utils.php');
 ?>
 <html lang="pt-br">
 
 <head>
   <?php
-  include('init-page.php');
+    include('init-page.php');
   ?>
 </head>
 
 <body class="page-services">
 
   <?php
-  include('header.php');
+    include('header.php');
   ?>
 
   <main id="main">
@@ -67,66 +67,53 @@
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="row gy-5 posts-list">
+          <div class="row gy-5 posts-list">
 
               <?php
                 if($num_artefatos_pagina > 0) {
                   for($i=0; $i<$num_artefatos_pagina; $i++) {
                       $artefato = mysqli_fetch_array($artefatos_result);
-                      
               ?>
 
-              <!-- post list item -->
               <div class="col-lg-12">
                 <article class="d-flex flex-column">
-
                   <h2 class="title">
-                    <a href="<?php print_r($artefato['url'])?>">
-                      <?php print_r($artefato['nome'])?>
-                    </a>
-                  </h2>
+                      <a href="<?php print_r($artefato['url'])?>">
+                        <?php print_r($artefato['nome'])?>
+                      </a>
+                    </h2>
 
-                  <div class="meta-top">
-                    <ul>
-                      <li class="d-flex align-items-center">
+                    <div class="meta-top">
+                      <ul>
+                        <li class="d-flex align-items-center">
 
-                        <i class="bi bi-clock"></i>
-                        <a href="<?php print_r($artefato['url'])?>">
-                          <time datetime="<?php print_r($artefato['ano'])?>">
-                            <?php print_r($artefato['ano'])?>
-                          </time>
-                        </a>
+                          <i class="bi bi-clock"></i>
+                          <a href="<?php print_r($artefato['url'])?>">
+                            <time datetime="<?php print_r($artefato['ano'])?>">
+                              <?php print_r($artefato['ano'])?>
+                            </time>
+                          </a>
 
-                      </li>
-                      <li class="d-flex align-items-center">
+                        </li>
+                        <li class="d-flex align-items-center">
                         
                         <i class="bi bi-person"></i>
                           <a href="">
-                          <?php 
-                            
-                            $artefato_id = $artefato['id'];
-                            $query = "SELECT * FROM artefato_pesquisador WHERE artefato_pesquisador.artefato_id = $artefato_id";
-                            
-                            $artefato_pesquisador_result = mysqli_query($mysqli, $query);
-                            $num_pesquisadores = mysqli_num_rows($artefato_pesquisador_result);
+                            <?php
+                              $artefato_id = $artefato['id'];
+                              $query = "SELECT p.nome FROM artefato_pesquisador as ap JOIN pesquisador as p ON ap.pesquisador_id = p.id WHERE ap.artefato_id = $artefato_id";
+                              $artefato_pesquisador_result = mysqli_query($mysqli, $query);
+                              $num_pesquisadores = mysqli_num_rows($artefato_pesquisador_result);
 
-                            for($j=0; $j<$num_pesquisadores; $j++) {
-                              
-                              $artefato_pesquisador = mysqli_fetch_array($artefato_pesquisador_result);
-                              $pesquisador_id = $artefato_pesquisador['pesquisador_id'];
-                              
-                              $query = "SELECT nome FROM pesquisador WHERE id = $pesquisador_id";
-                              $pesquisador_result = mysqli_query($mysqli, $query);
-                              $pesquisador = mysqli_fetch_array($pesquisador_result);
-
-                              if (j < $num_pesquisadores-1)
-                                print_r($pesquisador['nome'].", ");
-                              else
-                                print_r($pesquisador['nome']);
-                            }
-                          
-                          ?>
-                        </a>
+                              for ($j=0; $j<$num_pesquisadores; $j++) {
+                                  $pesquisador = mysqli_fetch_array($artefato_pesquisador_result);
+                                  if ($j < $num_pesquisadores-1)
+                                    print_r($pesquisador['nome'].", ");
+                                  else
+                                    print_r($pesquisador['nome']);
+                              }
+                            ?>
+                          </a>
                       </li>
                       
                     </ul>
@@ -144,33 +131,33 @@
                       <i class="bi bi-arrow-right"></i>
                     </a>
                   </div>
-
                 </article>
               </div>
               <!-- End post list item -->
-              
+
               <?php
-                 }
+                  }
                 }
                 else {
               ?>
 
-              <div class="col-lg-12">
-                <article class="d-flex flex-column">
-
-                  <h2 class="title">
-                    <a href="#">
-                      Nunhum resultado encontrado.
-                    </a>
-                  </h2>
-                </article>
-              </div>
+                <div class="col-lg-12">
+                  <article class="d-flex flex-column">
+                    <h2 class="title">
+                      <a href="#">
+                        Nunhum resultado encontrado.
+                      </a>
+                    </h2>
+                  </article>
+                </div>
 
               <?php
                 }
               ?>
 
-            </div><!-- End blog posts list -->
+          </div><!-- End blog posts list -->
+
+            
 
             <div class="blog-pagination">
               <ul class="justify-content-center">
