@@ -43,16 +43,14 @@
           </div>
           <div class="col-lg-8">
             <div class="content ps-lg-5">
-              <h3>Voluptatem dignissimos provident quasi</h3>
               <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                O Grupo de Pesquisa e Extensão em Ensino, Tecnologia e Saúde (GPETS), é um grupo de pesquisa e extensão que planeja, aplica e avalia o desenvolvimento de intervenções educativas apoiadas por tecnologias com foco nas competências profissionais e socioemocionais. Inclui-se o uso das tecnologias digitais no processo de ensino e aprendizagem, desenvolvimento de aplicativos para plataformas mobile e websites, de jogos, de programas e projetos para o desenvolvimento do ensino e aprendizagem criativos, críticos e inovadores, assim como abrange discussões sobre as teorias e as possibilidades de desenvolvimento da prática pedagógica por meio de metodologias ativas.
               </p>
-              <ul>
+              <!-- <ul>
                 <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
                 <li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
                 <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              </ul>
+              </ul> -->
             </div>
           </div>
         </div>
@@ -60,93 +58,65 @@
       </div>
     </section>
 
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
+
+    <section id="about" class="team">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Our Team</h2>
-
+          <h2>Ações</h2>
         </div>
 
-        <div class="row gy-4">
+        <div class="row gy-4" data-aos="fade-up">
+          <div class="col-lg-4">
+            <img src="assets/img/gpets/Foto 1 GPETS.jpeg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-4">
+            <img src="assets/img/gpets/Foto 3 GPETS.jpeg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-4">
+            <img src="assets/img/gpets/Foto 7 GPETS.jpeg" class="img-fluid" alt="">
+          </div>
+        </div>
 
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
+        <div class="row gy-4" data-aos="fade-up" style="margin-top: 20px;">
+          <div class="col-lg-4">
+            <img src="assets/img/gpets/Foto 4 GPETS.jpeg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-4">
+            <img src="assets/img/gpets/Foto 5 GPETS.jpeg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-4">
+            <img src="assets/img/gpets/Foto 6 GPETS.jpeg" class="img-fluid" alt="">
+          </div>
         </div>
 
       </div>
-    </section><!-- End Team Section -->
+    </section>
+
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Nosso time</h2>
+        </div>
+
+        <div class="row gy-4" data-aos="fade-up">
+            <div class="content ps-lg-5">
+              <p>
+                Atualmente, o GPETS conta, segundo o Diretório de Grupos de Pesquisa da CNPq, com 9 pesquisadores e 28 estudantes, sendo a divisão demonstrada abaixo:
+              </p>
+              <p>
+                <img src="assets/img/gpets/Tabela Membros do GPETS.png" class="img-fluid" alt="">
+              </p>
+              <p>
+                Para saber mais sobre o Grupo de Pesquisa e Extensão em Ensino, Tecnologia e Saúde (GPETS), acesse nossas redes sociais e acompanhe nossos trabalhos.
+              </p>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Team Section -->
 
   </main><!-- End #main -->
 

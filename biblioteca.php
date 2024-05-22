@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
   require_once('conexao.php');
-  require_once('scripts_php/utils.php');
+  // require_once('scripts_php/utils.php');
 ?>
 <html lang="pt-br">
 

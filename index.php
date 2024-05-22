@@ -56,17 +56,19 @@
           </div>
           <div class="col-lg-8">
             <div class="content ps-lg-5">
-              <h3>Interprofissionalidade</h3>
+              <h3>Sobre</h3>
               <p>
-              As experiências acumuladas demonstram que a execução dos pontos do programa apresenta tendências no sentido 
-              de aprovar a manutenção dos índices pretendidos. Por conseguinte, a constante divulgação das informações 
-              deve passar por modificações independentemente das diretrizes de desenvolvimento para o futuro. A prática 
-              cotidiana prova que a contínua expansão de nossa atividade possibilita uma melhor visão global do sistema 
-              de participação geral. 
+                Observa-APS é um produto tecnológico advindo de uma pesquisa realizada pelo Grupo de Pesquisa e Extensão em Ensino, Tecnologia e Saúde (GPETS) vinculado à Universidade Estadual Vale do Acaraú (UVA), situada na cidade de Sobral-ce. O observatório tem como objetivo disseminar debates e estudos sobre a Interprofissionalidade na Atenção Primária à Saúde, possibilitando um espaço virtual democrático e dinâmico de aprendizado.
               </p>
-              <p>No entanto, não podemos esquecer que a valorização de fatores subjetivos maximiza as 
-              possibilidades por conta das novas proposições. Do mesmo modo, a competitividade nas transações comerciais 
-              desafia a capacidade de equalização das condições financeiras e administrativas exigidas.</p>
+              <p>
+                Aqui você tem acesso a artigos, dissertações e outros estudos científicos referentes à interprofissionalidade e sua face na Atenção Primária à Saúde. Porém, além de um simples repositório para guardar documentos, você pode acessar pesquisas que estão em desenvolvimento e interagir com os pesquisadores por meio de comentários.
+              </p>
+              <p>
+                Dessa forma, você pode atuar de forma ativa e sustentável em seu conhecimento, no qual além de ter acesso a livre leitura de estudos, pode agir em debates sobre a temática. 
+              </p>
+              <p class="fw-bold"> 
+                Embarque nessa jornada de conhecimento e desbrave o OBSERVA-APS!
+              </p>
             </div>
           </div>
         </div>
