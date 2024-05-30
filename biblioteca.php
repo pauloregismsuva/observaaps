@@ -41,6 +41,13 @@
         $pagina = filter_input(INPUT_GET, "pagina", FILTER_VALIDATE_INT);
       }
 
+      $parametros_busca = filter_input_array(INPUT_POST, [
+        "nome" => FILTER_SANITIZE_STRING,
+        "autor" => FILTER_SANITIZE_STRING,
+        "ano-ini" => FILTER_VALIDATE_INT,
+        "ano-fim" => FILTER_VALIDATE_INT,
+      ]);
+
       if (!$pagina) {
         $pagina = 1;
       }
@@ -54,7 +61,44 @@
 
       $paginas = ceil($num_artefatos / $limite);
 
-      $query = "SELECT * FROM artefato ORDER BY ano DESC LIMIT $inicio, $limite";
+      $query = "SELECT * FROM artefato";
+
+      if ($parametros_busca) {
+        $query = $query." WHERE";
+        $addAND = FALSE;
+
+        if ($parametros_busca['nome']) {
+          $query = $query." nome LIKE '%".$parametros_busca['nome']."%'";
+          $addAND = TRUE;
+        }
+        
+        if ($parametros_busca['autor']) {
+          if ($addAND)
+            $query = $query." AND";
+
+          $query = $query." autor LIKE '%".$parametros_busca['autor']."%'";
+          $addAND = TRUE;
+        }
+
+        if ($parametros_busca['ano-ini']) {
+          if ($addAND)
+            $query = $query." AND";
+
+          $query = $query." ano >= ".$parametros_busca['ano-ini'];
+          $addAND = TRUE;
+        }
+
+        if ($parametros_busca['ano-fim']) {
+          if ($addAND)
+            $query = $query." AND";
+
+          $query = $query." ano <= ".$parametros_busca['ano-fim'];
+        }
+        
+      }
+
+      $query = $query." ORDER BY ano DESC LIMIT $inicio, $limite";
+      
       $artefatos_result = mysqli_query($mysqli, $query);
       $num_artefatos_pagina = mysqli_num_rows($artefatos_result);
     ?>
@@ -99,20 +143,7 @@
                         
                         <i class="bi bi-person"></i>
                           <a href="">
-                            <?php
-                              $artefato_id = $artefato['id'];
-                              $query = "SELECT p.nome FROM artefato_pesquisador as ap JOIN pesquisador as p ON ap.pesquisador_id = p.id WHERE ap.artefato_id = $artefato_id";
-                              $artefato_pesquisador_result = mysqli_query($mysqli, $query);
-                              $num_pesquisadores = mysqli_num_rows($artefato_pesquisador_result);
-
-                              for ($j=0; $j<$num_pesquisadores; $j++) {
-                                  $pesquisador = mysqli_fetch_array($artefato_pesquisador_result);
-                                  if ($j < $num_pesquisadores-1)
-                                    print_r($pesquisador['nome'].", ");
-                                  else
-                                    print_r($pesquisador['nome']);
-                              }
-                            ?>
+                          <?php print_r($artefato['autor'])?>
                           </a>
                       </li>
                       
@@ -197,28 +228,29 @@
 
             <div class="sidebar ps-lg-4">
 
+              <!-- Formulário de busca -->
               <div class="sidebar-item">
                 <h3 class="sidebar-title" style="margin-bottom:20px">Busca</h3>
                 
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <form action="biblioteca.php" method="post" class="biblioteca-form">
                   <div class="form-group mt-6">
-                    <input type="text" class="form-control" name="titulo" id="titulo" placeholder="Título" >
+                    <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" >
                   </div>
 
                   <div class="form-group mt-3">
-                    <input type="text" class="form-control" name="autor" id="autor" placeholder="Autor" ></textarea>
+                    <input type="text" class="form-control" name="autor" id="autor" placeholder="Autor" ></input>
                   </div>
 
                   <div class="row" style="margin-top:20px">
                     <div class="col-md form-group mt-3 mt-md-0">
-                      <input type="text" class="form-control" name="ano-ini" id="ano-ini" placeholder="Ano (início)" >
+                      <input type="text" class="form-control" name="ano-ini" id="ano-ini" placeholder="Ano (início)" ></input>
                     </div>  
                     <div class="col-md form-group">
-                    <input type="text" class="form-control" name="ano-fim" id="ano-fim" placeholder="Ano (fim)" ></textarea>
+                      <input type="text" class="form-control" name="ano-fim" id="ano-fim" placeholder="Ano (fim)" ></input>
                     </div>
                   </div>
                   
-                  <div class="text-center"><button type="submit">Buscar</button></div>
+                  <div class="text-center"><button class="btn btn-primary" type="submit" name="submit" id="submit">Buscar</button></div>
                 </form>
 
                 <!--  
