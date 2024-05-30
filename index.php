@@ -61,10 +61,10 @@
                 Observa-APS é um produto tecnológico advindo de uma pesquisa realizada pelo Grupo de Pesquisa e Extensão em Ensino, Tecnologia e Saúde (GPETS) vinculado à Universidade Estadual Vale do Acaraú (UVA), situada na cidade de Sobral-ce. O observatório tem como objetivo disseminar debates e estudos sobre a Interprofissionalidade na Atenção Primária à Saúde, possibilitando um espaço virtual democrático e dinâmico de aprendizado.
               </p>
               <p>
-                Aqui você tem acesso a artigos, dissertações e outros estudos científicos referentes à interprofissionalidade e sua face na Atenção Primária à Saúde. Porém, além de um simples repositório para guardar documentos, você pode acessar pesquisas que estão em desenvolvimento e interagir com os pesquisadores por meio de comentários.
+                Aqui você tem acesso a artigos, dissertações e outros estudos científicos referentes à interprofissionalidade e sua face na Atenção Primária à Saúde. Porém, além de um simples repositório para guardar documentos, você pode acessar pesquisas que estão em desenvolvimento e espaço de interação com outros pesquisadores e colaboradores sobre o tema.
               </p>
               <p>
-                Dessa forma, você pode atuar de forma ativa e sustentável em seu conhecimento, no qual além de ter acesso a livre leitura de estudos, pode agir em debates sobre a temática. 
+                Dessa forma, você pode atuar de maneira ativa e sustentável em seu conhecimento, no qual além de ter acesso a livre leitura de estudos, pode agir de forma ativa. 
               </p>
               <p class="fw-bold"> 
                 Embarque nessa jornada de conhecimento e desbrave o OBSERVA-APS!

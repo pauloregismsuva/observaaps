@@ -14,8 +14,9 @@
         <ul>
           <li><a href="index.php" class="active">Início</a></li>
           <li><a href="gpets.php">GPETS</a></li>
-          <li><a href="pesquisas.php">Pesquisas</a></li>
-          <li><a href="biblioteca.php">Biblioteca</a></li>
+          <li><a href="estatico-pesquisas.php">Pesquisas</a></li>
+          <li><a href="estatico-repositorio.php">Repositório</a></li>
+          <li><a href="redes_praticas.php">Redes de práticas</a></li>
         </ul>
       </nav><!-- .navbar -->
 

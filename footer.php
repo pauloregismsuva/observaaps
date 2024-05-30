@@ -7,8 +7,7 @@
             <a href="index.php" class="logo d-flex align-items-center">
               <span>ObservaAPS</span>
             </a>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies 
-                darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <p>Observatório da Interprofissionalidade na Atenção Primária à Saúde</p>
             <div class="social-links d-flex  mt-3">
               <!--
               <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -23,8 +22,8 @@
             <h4>Entre em contato</h4>
             <p>
               Av. Cmte. Maurocélio Rocha Pontes, 186 - Derby Clube, Sobral - CE, 62042-280 <br><br>
-              <strong>Telefone:</strong> (88) 3677-4242<br>
-              <strong>Email:</strong> gpets@uvanet.br<br>
+              <strong>Telefone: </strong> (88) 3677-4242<br>
+              <strong>Email: </strong>observaaps@gmail.com<br>
             </p>
 
           </div>
