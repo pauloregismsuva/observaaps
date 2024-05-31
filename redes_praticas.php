@@ -43,22 +43,22 @@
                 Apesar do conceito existir há muito tempo, a prática voltada para a interprofissionalidade ainda anda por passos largos. Isso ocorre principalmente pelas bolhas oriundas de uma cultura ainda bastante influenciada pelo modelo biomédico, o qual é muito focado na figura do médico, fortalecendo a existência de uma hierarquização nos serviços que desvaloriza o trabalho colaborativo, e tem um olhar limitado sobre o fazer saúde, sendo considerado somente o fator doença e excluindo outros fatores determinantes à saúde do indivíduo.
               </p>
               <p>
-                Visando romper essas barreiras, a interprofissionalidade tem como foco um fazer profissional que leva em consideração a integralidade do indivíduo, isto é, não só a doença, mas também o contexto social, econômico e emocional. Para isso, instiga o trabalho colaborativo entre as profissões, no qual atuam de forma integrada com objetivo em comum, que é o bem estar completo do paciente. Todas esses aspectos fortalecem interações de trabalho horizontais, onde cada um tem igualmente importante no serviço.
+                Visando romper essas barreiras, a interprofissionalidade tem como foco um fazer profissional que leva em consideração a integralidade do indivíduo, isto é, não só a doença, mas também o contexto social, econômico e emocional. Para isso, instiga o trabalho colaborativo entre as profissões, no qual atuam de forma integrada com objetivo em comum, que é o bem estar completo do paciente. Todos esses aspectos fortalecem interações de trabalho horizontais, onde cada um tem igualmente importância no serviço.
               </p>
               <p>
                 Por todos esses aspectos, é necessário o incentivo às ações que propiciem a valorização do trabalho interprofissional nos diferentes serviços de saúde. Debates como esse devem surgir não só após a formação, como também ainda durante a academia. 
               </p>
               <p>
-                Pensando nisso, o Observa-APS traz na aba “Redes de práticas” a proposta de compartilhar experiências reais de estudantes, profissionais e comunidade relacionada à ações de interprofissionalidade, especialmente no que se refere à Atenção Primária à saúde.
+                Pensando nisso, o Observa-APS traz na aba “Redes de práticas” a proposta de compartilhar experiências reais de estudantes, profissionais e comunidade relacionada à ações de interprofissionalidade, especialmente no que se refere à Atenção Primária à Saúde.
               </p>
               <p class="fw-bold"> 
-                Embarque nessa jornada de conhecimento e desbrave o OBSERVA-APS!
+                CHEGOU SUA HORA DE CONTRIBUIR!
               </p>
               <p>
                 A melhor forma de incentivar, é pelo exemplo. Neste espaço você tem a oportunidade de compartilhar ações que realizou sobre a temática e criar debates com outros pesquisadores e colaboradores.
               </p>
               <p>
-                E é bem simples… Basta você enviar para o e-mail observaaps@gmail.com sua prática com os seguintes aspectos: título, participantes, resumo e registros (fotos ou vídeos). Vale ressaltar que para ser exposta no observatório, cada prática recebida no e-mail irá passar por uma curadoria mensal para serem selecionadas as práticas mais coerentes com a temática.
+                E é bem simples… Basta você enviar para o e-mail <span class="fw-bold">observaaps@gmail.com </span> sua prática com os seguintes aspectos:  <span class="fw-bold">título, participantes, resumo e registros (fotos ou vídeos)</span>. Vale ressaltar que para ser exposta no observatório, cada prática recebida no e-mail irá passar por uma <span class="fw-bold">curadoria mensal</span> para serem selecionadas as práticas mais coerentes com a temática.
               </p>
 
               <p>

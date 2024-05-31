@@ -104,13 +104,13 @@
         <div class="row gy-4" data-aos="fade-up">
             <div class="content ps-lg-5">
               <p>
-                Atualmente, o GPETS conta, segundo o Diretório de Grupos de Pesquisa da CNPq, com 9 pesquisadores e 28 estudantes, sendo a divisão demonstrada abaixo:
+                O GPETS é liderado pelas professoras e pesquisadoras Maristela Inês Osawa Vasconcelos e Joyze Mazza Nunes Aragão. Atualmente conta, segundo o Diretório de Grupos de Pesquisa da CNPq, com 9 pesquisadores e 28 estudantes, sendo a divisão demonstrada abaixo:
               </p>
               <p>
                 <img src="assets/img/gpets/Tabela Membros do GPETS.png" class="img-fluid" alt="">
               </p>
               <p>
-                Para saber mais sobre o Grupo de Pesquisa e Extensão em Ensino, Tecnologia e Saúde (GPETS), acesse nossas redes sociais e acompanhe nossos trabalhos.
+                Para saber mais sobre o Grupo de Pesquisa e Extensão em Ensino, Tecnologia e Saúde (GPETS) e conhecer todos os seus integrantes, acesse nossas redes sociais e acompanhe os trabalhos desenvolvidos pelo grupo. No rodapé do site você encontra nosso instagram (@gpets_uva) e o email para entrar em conato!
               </p>
             </div>
         </div>

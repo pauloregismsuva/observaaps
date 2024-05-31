@@ -75,7 +75,6 @@
                   <h2 class="title">
                       <a href="https://drive.google.com/file/d/1BCvOzHJMZ4BU7XDT-vgnSmXo7FdIq2nX/view?usp=sharing">
                       COMUNICAÇÃO INTERPROFISSIONAL NA ATENÇÃO PRIMÁRIA À SAÚDE:  SCOPING REVIEW
-                       
                       </a>
                     </h2>
 
@@ -134,8 +133,8 @@
                           <i class="bi bi-clock"></i>
 
                           <a href="https://www.scielo.br/j/icse/a/XRJVNsRHcqfsRXLZ7RMxCks/">
-                            <time datetime="2024">
-                              2024
+                            <time datetime="2018">
+                              2018
                             </time>
                           </a>
 
@@ -181,8 +180,8 @@
                           <i class="bi bi-clock"></i>
 
                           <a href="https://www.scielo.br/j/icse/a/XRJVNsRHcqfsRXLZ7RMxCks/">
-                            <time datetime="2024">
-                              2024
+                            <time datetime="2022">
+                              2022
                             </time>
                           </a>
 
@@ -229,7 +228,7 @@
 
                           <a href="https://acervomais.com.br/index.php/saude/article/view/4076">
                             <time datetime="2024">
-                              2024
+                              2020
                             </time>
                           </a>
 
@@ -275,8 +274,8 @@
                           <i class="bi bi-clock"></i>
 
                           <a href="https://www.scielo.br/j/rgenf/a/YDQZsCw6nLGf7p6Jn7WKb4M/?lang=pt">
-                            <time datetime="2024">
-                              2024
+                            <time datetime="2018">
+                              2018
                             </time>
                           </a>
 
@@ -322,8 +321,8 @@
                           <i class="bi bi-clock"></i>
 
                           <a href="https://scholar.google.com.br/scholar?hl=pt-BR&as_sdt=0%2C5&q=interprofissionalidade+na+aten%C3%A7%C3%A3o+prim%C3%A1ria&oq=#d=gs_qabs&t=1716733240033&u=%23p%3D_7IOlePczHAJ">
-                            <time datetime="2024">
-                              2024
+                            <time datetime="2021">
+                              2021
                             </time>
                           </a>
 
@@ -369,8 +368,8 @@
                           <i class="bi bi-clock"></i>
 
                           <a href="https://www.scielosp.org/article/icse/2018.v22suppl2/1525-1534/">
-                            <time datetime="2024">
-                              2024
+                            <time datetime="2018">
+                              2018
                             </time>
                           </a>
 
@@ -417,7 +416,7 @@
 
                           <a href="http://revista.redeunida.org.br/ojs/index.php/rede-unida/article/view/3035">
                             <time datetime="2024">
-                              2024
+                              2021
                             </time>
                           </a>
 
@@ -489,72 +488,6 @@
             </div><!-- End blog pagination -->
 
           </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
-
-            <div class="sidebar ps-lg-4">
-
-              <div class="sidebar-item">
-                <h3 class="sidebar-title" style="margin-bottom:20px">Busca</h3>
-                
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                  <div class="form-group mt-6">
-                    <input type="text" class="form-control" name="titulo" id="titulo" placeholder="Título" >
-                  </div>
-
-                  <div class="form-group mt-3">
-                    <input type="text" class="form-control" name="autor" id="autor" placeholder="Autor" ></textarea>
-                  </div>
-
-                  <div class="row" style="margin-top:20px">
-                    <div class="col-md form-group mt-3 mt-md-0">
-                      <input type="text" class="form-control" name="ano-ini" id="ano-ini" placeholder="Ano (início)" >
-                    </div>  
-                    <div class="col-md form-group">
-                    <input type="text" class="form-control" name="ano-fim" id="ano-fim" placeholder="Ano (fim)" ></textarea>
-                    </div>
-                  </div>
-                  
-                  <div class="text-center"><button type="submit">Buscar</button></div>
-                </form>
-
-                <!--  
-                <form action="" class="mt-3">
-                  <input type="text">
-                  <button type="submit"><i class="bi bi-search"></i></button>
-                </form>
-                -->
-              </div>
-              
-              <!-- End sidebar search formn-->
-
-              <div class="sidebar-item categories">
-                <h3 class="sidebar-title">Categorias</h3>
-                <ul class="mt-3">
-                  <li><a href="#">Todas <span>(25)</span></a></li>
-                  <li><a href="#">Tese <span>(7)</span></a></li>
-                  <li><a href="#">Dissertação <span>(13)</span></a></li>
-                  <li><a href="#">Artigo <span>(33)</span></a></li>
-                  <li><a href="#">Atenção primária <span>(12)</span></a></li>
-                  <li><a href="#">Saúde mental <span>(5)</span></a></li>
-                  <li><a href="#">Recurso tecnológico <span>(22)</span></a></li>
-                </ul>
-              </div><!-- End sidebar categories-->
-
-              <div class="sidebar-item tags">
-                <h3 class="sidebar-title">Palavras-chave</h3>
-                <ul class="mt-3">
-                  <li><a href="#">Revisão</a></li>
-                  <li><a href="#">Promoção da Saúde</a></li>
-                  <li><a href="#">Tecnologia Educacional</a></li>
-                  <li><a href="#">Estudo de Validação</a></li>
-                </ul>
-              </div><!-- End sidebar tags-->
-
-            </div><!-- End Blog Sidebar -->
-
-          </div>
-
         </div>
 
       </div>

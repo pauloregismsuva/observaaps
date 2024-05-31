@@ -27,7 +27,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-4">
-          <h2 data-aos="fade-up">Observatório da interprofissionalidade na atenção primária à saúde</h2>
+          <h2 data-aos="fade-up">Observatório da interprofissionalidade na Atenção Primária à Saúde</h2>
           <!--
           <blockquote data-aos="fade-up" data-aos-delay="100">
             <p> Observatório da interprofissionalidade na atenção primária à saúde </p>
