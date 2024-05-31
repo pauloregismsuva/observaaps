@@ -16,7 +16,7 @@
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/blog-header.jpg');">
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/pesquisa.png');">
       <div class="container position-relative d-flex flex-column align-items-center">
 
         <h2>Pesquisas</h2>
@@ -43,22 +43,22 @@
                 <article class="d-flex flex-column">
 
                   <div class="post-img">
-                    <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                    <img src="assets/img/mindfulness.jpg" alt="" class="img-fluid">
                   </div>
 
                   <h2 class="title">
-                    <a href="pesquisa-detalhes.php">
-                      MINDFULNESS E O DESENVOLVIMENTO DE COMPETÊNCIAS PROFISSIONAIS E SOCIOEMOCIONAIS PARA O TRABALHO EM EQUIPE NA ESTRATÉGIA SAÚDE DA FAMÍLIA
+                    <a href="pesquisa-gpets1.php">
+                      Mindfulness e o desenvolvimento de competências profissionais e socioemocionais para o trabalho em equipe na estratégia saúde ds família
                     </a>
                   </h2>
 
                   <div class="meta-top">
                     <ul>
                       <li class="d-flex align-items-center"><i class="bi bi-person"></i> 
-                      <a href="pesquisa-detalhes.php">
+                      <a href="pesquisa-gpets1.php">
                         Maria Rabechy Portela Cavalcante; Maristela Inês Osawa Vasconcelos; Loíse Elena Zanin Lopes 
                       </a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="pesquisa-detalhes.php"><time datetime="2022-01-01">Jan 1, 2022</time></a></li>
+                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="pesquisa-gpets1.php"><time datetime="2022-01-01">2024</time></a></li>
                       <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="pesquisa-detalhes.php">12 Comments</a></li> -->
                     </ul>
                   </div>
@@ -70,7 +70,7 @@
                   </div>
 
                   <div class="read-more mt-auto align-self-end">
-                    <a href="pesquisa-detalhes.php">Ver mais <i class="bi bi-arrow-right"></i></a>
+                    <a href="pesquisa-gpets1.php">Ver mais <i class="bi bi-arrow-right"></i></a>
                   </div>
 
                 </article>
@@ -81,19 +81,19 @@
                 <article class="d-flex flex-column">
 
                   <div class="post-img">
-                    <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
+                    <img src="assets/img/clima de trabalho.jpg" alt="" class="img-fluid">
                   </div>
 
                   <h2 class="title">
                     <a href="pesquisa-detalhes.php">
-                      ANÁLISE DO CLIMA DO TRABALHO EM EQUIPE DOS TRABALHADORES DA ESF DO MUNICÍPIO DE SOBRAL-CE E PERCEPÇÕES SOBRE A PRÁTICA COLABORATIVA
+                      Análise do clima do trabalho em equipe dos trabalhadores da ESF do município de Sobral-CE e percepções sobre a prática colaborativa
                     </a>
                   </h2>
 
                   <div class="meta-top">
                     <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="pesquisa-detalhes.php">Maria Elizabete Ricardo Brigido; Maristela Inês Osawa Vasconcelos.</a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="pesquisa-detalhes.php"><time datetime="2022-01-01">Jan 1, 2022</time></a></li>
+                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="pesquisa-gpets2.php">Maria Elizabete Ricardo Brigido; Maristela Inês Osawa Vasconcelos.</a></li>
+                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="pesquisa-gpets2.php"><time datetime="2022-01-01">2024</time></a></li>
                       <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="pesquisa-detalhes.php">12 Comments</a></li> -->
                     </ul>
                   </div>
@@ -105,7 +105,7 @@
                   </div>
 
                   <div class="read-more mt-auto align-self-end">
-                    <a href="pesquisa-detalhes.php">Ver mais <i class="bi bi-arrow-right"></i></a>
+                    <a href="pesquisa-gpets2.php">Ver mais <i class="bi bi-arrow-right"></i></a>
                   </div>
 
                 </article>
